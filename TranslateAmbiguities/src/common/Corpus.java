@@ -49,7 +49,7 @@ public class Corpus {
 	
 	public Translations getTranslations(String wordToTranslate){
 	
-		//TODO
-		return null;
+		
+		return corpusEntrys.get(wordToTranslate);
 	}
 }

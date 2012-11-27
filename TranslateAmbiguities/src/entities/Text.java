@@ -36,7 +36,7 @@ public class Text {
 	 * @param wordToOccure
 	 * @return
 	 */
-	public boolean occursOntext(String wordToOccure){
+	public boolean occursOnText(String wordToOccure){
 		return wholeText.contains(wordToOccure);
 	}
 	
