@@ -40,4 +40,8 @@ public class Text {
 		return wholeText.contains(wordToOccure);
 	}
 	
+	public int getNumberOfSentence(){
+		return (sentences == null) ? 0 : sentences.size();
+	}
+	
 }

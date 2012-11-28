@@ -24,6 +24,14 @@ public class Sentence {
 		else return null;
 	}
 	
+	public String getWholeSentenceAsString() {
+		return wholeSentenceAsString;
+	}
+
+	public void setWholeSentenceAsString(String wholeSentenceAsString) {
+		this.wholeSentenceAsString = wholeSentenceAsString;
+	}
+
 	public boolean hasMoreWords(){
 		if((words.size()-1) > wordCounter){
 			return true;
