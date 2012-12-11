@@ -1,15 +1,25 @@
 package entities;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
+/**
+ * Consists of the sentence as String and also holds a list of words
+ * @author Andreas
+ *
+ */
 public class Sentence {
 
-	String wholeSentenceAsString;
-	List<String> words;
-	int wordCounter;
+	String wholeSentenceAsString = "";
+	List<String> words = new ArrayList<String>();
+	int wordCounter=0;
 	
 	public void tokenizeSentence(){
-		//TODO
+		StringTokenizer tokenizer = new StringTokenizer(wholeSentenceAsString);
+		while(tokenizer.hasMoreTokens()){
+			words.add(tokenizer.nextToken());
+		}
 	}
 	
 	/**
@@ -18,8 +28,9 @@ public class Sentence {
 	 */
 	public String getNextWord(){
 		if(hasMoreWords()){
+			String ret = words.get(wordCounter);
 			wordCounter+=1;
-			return words.get(wordCounter-1);
+			return ret;
 		}
 		else return null;
 	}
@@ -33,7 +44,7 @@ public class Sentence {
 	}
 
 	public boolean hasMoreWords(){
-		if((words.size()-1) > wordCounter){
+		if((words.size()) > wordCounter){
 			return true;
 		}
 		else return false;

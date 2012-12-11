@@ -2,6 +2,12 @@ package entities;
 
 import java.util.List;
 
+/**
+ * Consists of the original word, the translated word and other words to identify the right context for this translations.
+ * Further is has a likelyhood to translate on a statistical approach
+ * @author Andreas
+ *
+ */
 public class TranslationEntry {
 
 	String originalWord;

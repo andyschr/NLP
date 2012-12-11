@@ -7,7 +7,7 @@ import entities.Translations;
 
 /**
  * This class defines the corpus or the dictionary in that case
- * Every kexword can have more than one translation.
+ * Every keyword can have more than one translation.
  * @author Andreas
  *
  */
@@ -42,6 +42,7 @@ public class Corpus {
 		
 	}
 	
+	
 	public boolean readFromInputFile(String filename){
 		//TODO
 		return false;
@@ -49,7 +50,6 @@ public class Corpus {
 	
 	public Translations getTranslations(String wordToTranslate){
 	
-		
 		return corpusEntrys.get(wordToTranslate);
 	}
 }
