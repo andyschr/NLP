@@ -9,6 +9,11 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Thic class holds all the words that can be used to determine whether a sentence is a question or not.
+ * @author Andreas
+ *
+ */
 public class Dictionary {
 	List<String> questionWords;
 	
@@ -30,11 +35,23 @@ public class Dictionary {
 			questionWords.add(word);
 		}
 		
+		reader.close();
+		stream.close();
+		inputStream.close();
+		
 	}
 	
+	/**
+	 * Determines if a given word is found in the dictionary or not.
+	 * @param wordToCheck
+	 * @return true if it's found, false if not
+	 */
 	public boolean isQuestionWord(String wordToCheck){
-		if(wordToCheck == null || this.questionWords == null){
+		if(this.questionWords == null){
 			throw new IllegalStateException("WordToCheck and/or questionWords is null");
+		}
+		if(wordToCheck == null){
+			return false;
 		}
 		return questionWords.contains(wordToCheck);
 	}
